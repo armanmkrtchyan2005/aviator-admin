@@ -1,0 +1,68 @@
+.switch {
+    width: 50px;
+    height: 25px;
+    /* padding: 2.5px; */
+    background: linear-gradient(0deg, #d8d8d8, #cccccc);
+    border-radius: 25px;
+    border-block: 0.02em solid #ececec;
+}
+
+/* svg {
+    all: unset;
+} */
+
+.stop1 {
+    stop-color: #a5a5a5;
+}
+
+.stop2 {
+    stop-color: #717171;
+}
+.thumb {
+    margin-inline: 2.5px;
+    width: calc(100% - 5px);
+    height: calc(100% - 3px);
+}
+
+.thumb rect {
+    fill: url(#Gradient1);
+    height: 100%;
+    width: calc(100% - 2.5px);
+    border-radius: 25px;
+    filter: url(#inset-shadow);
+    /* translate: 2.5px 0; */
+    /* filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4)); */
+    /* box-shadow: inset 0 0 15px rgb(0, 0, 0, 0.5); */
+}
+
+.thumb circle {
+    fill: red;
+
+    /* border-radius: 25px; */
+}
+.thumb circle::after {
+    content: "Lolo";
+    width: 20px;
+    height: 20px;
+    fill: red;
+
+    /* border-radius: 25px; */
+}
+
+.thumb g {
+    will-change: translate;
+    transition: translate 0.3s linear;
+}
+
+.thumb g text {
+    line-height: 100%;
+    font-weight: 700;
+}
+
+.switch[aria-checked="true"] .thumb g {
+    translate: 22px 0px;
+}
+
+.switch:has([aria-checked="true"]) .switch {
+    width: 200px;
+}

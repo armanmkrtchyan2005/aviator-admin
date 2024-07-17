@@ -1,0 +1,1 @@
+export { RequisitesTable } from "./table";

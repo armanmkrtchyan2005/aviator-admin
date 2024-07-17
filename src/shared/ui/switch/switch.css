@@ -1,0 +1,66 @@
+.switch {
+    position: relative;
+    width: 50px;
+    height: 25px;
+    border-radius: 12.5px;
+    background: linear-gradient(0deg, #d8d8d8, #cccccc);
+    border-block: 0.02em solid #ececec;
+}
+
+.switch:focus-visible {
+    outline: 2px solid rgb(147 197 253);
+}
+
+.switch .checkbox {
+    position: absolute;
+    inset: 5px;
+    background: linear-gradient(0deg, #a5a5a5, #717171);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 7.5px rgba(0, 0, 0, 0.5);
+    transition: background 0.5s linear;
+}
+
+.switch .checkbox .thumb {
+    position: absolute;
+    top: -4px;
+    left: -3px;
+    width: 23px;
+    height: 23px;
+
+    border-radius: 50%;
+    background: linear-gradient(0deg, #ccc, #e4e4e4);
+    box-shadow: 0, 4px, 6px, rgba(0, 0, 0, 0.2);
+    border-block: 0.04em solid #ececec;
+    transition: 0.5s;
+}
+
+.switch .checkbox .thumb::before {
+    content: "OFF";
+    position: absolute;
+    inset: 2px;
+
+    background: linear-gradient(0deg, #e4e4e4, #ccc);
+    border-radius: 50%;
+    text-align: center;
+    font-size: 8px;
+    line-height: 18px;
+    color: red;
+    font-weight: 700;
+}
+
+.switch[aria-checked="true"] .checkbox {
+    background: linear-gradient(0deg, #00d22d, #717171);
+}
+
+.switch[aria-checked="false"] .checkbox {
+    background: linear-gradient(0deg, red, #717171);
+}
+
+.switch[aria-checked="true"] .checkbox .thumb {
+    left: 20px;
+}
+
+.switch[aria-checked="true"] .checkbox .thumb::before {
+    content: "ON";
+    color: #00d22d;
+}

@@ -1,0 +1,1 @@
+export { RequisiteTableWidget } from "./table";

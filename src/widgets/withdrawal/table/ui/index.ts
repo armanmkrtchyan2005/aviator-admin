@@ -1,0 +1,1 @@
+export { WithdrawalTableWidget } from "./table";

@@ -1,0 +1,30 @@
+.image-wrapper {
+    position: relative;
+    margin-inline: auto;
+    overflow: hidden;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    border-radius: 0.25rem;
+    /* width: 640px; */
+    height: 100%;
+    max-height: 100%;
+}
+
+.zoomable-image {
+    max-height: 100%;
+    /* width: 50%;
+    height: 50%; */
+    position: absolute;
+    inset: 0;
+    margin: auto;
+
+    object-fit: contain;
+    transform: scale(var(--zoom, 1));
+    transform-origin: var(--x) var(--y);
+    transition: transform 0.3s ease-in-out;
+    cursor: zoom-in;
+}
+
+.zoomable-image:hover {
+    --zoom: 3;
+}

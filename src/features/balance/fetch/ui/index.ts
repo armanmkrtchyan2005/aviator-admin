@@ -1,0 +1,1 @@
+export { FetchDepositHistory } from "./fetch";
